@@ -13,12 +13,6 @@ fi
 # Keep track of seen frequencies
 declare -A seen_frequencies
 
-# test for existence
-test1="bar"
-test2="xyzzy"
-
-if [[ ${array[$test1]} ]]; then echo "Exists"; fi    # Exists
-if [[ ${array[$test2]} ]]; then echo "Exists"; fi    # doesn't
 frequency=0
 
 # Infinite loop. We'll exit inside the loop as soon as we find a duplicate.
