@@ -12,6 +12,7 @@ fi
 
 while IFS='' read -r line || [[ -n "$line" ]]; do
     for (( i=0; i<${#line}; i++ )); do
+    	# lol disgusting
 	matches=$( grep "${line:0:$i}.${line:$(( i + 1 ))}" $1 | grep -v $line )
 	if [[ ! -z $matches ]]; then
 	    # We've found it!
